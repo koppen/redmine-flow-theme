@@ -1,3 +1,34 @@
+@import 'mixins/border-radius'
+@import 'mixins/box-shadow'
+
 body
-	background: green
-	color: white
+  background: #55555c
+  color: #333333
+  font-family: helvetica, 'helvetica neue', arial, sans-serif
+  font-size: 76%
+  line-height: 1.6em
+
+#top-menu
+  overflow: hidden
+  #account
+    float: right
+  #loggedas
+    float: right
+  ul
+    list-style-type: none
+    margin: 0
+    overflow: hidden
+    padding: 0
+    li
+      float: left
+      a
+        color: #ffffff
+        display: block
+        padding: 0 0.5em
+        text-decoration: none
+        text-shadow: rgba(0,0,0,0.5) 1px 1px 1px
+
+
+#main
+  #content
+    background: #ffffff
