@@ -1,5 +1,8 @@
 @import 'mixins/border-radius'
 @import 'mixins/box-shadow'
+@import 'mixins/navigation-list'
+
+$spacing: 12px
 
 body
   background: #55555c
@@ -15,19 +18,29 @@ body
   #loggedas
     float: right
   ul
-    list-style-type: none
-    margin: 0
-    overflow: hidden
-    padding: 0
+    +navigation_list
     li
-      float: left
       a
         color: #ffffff
-        display: block
-        padding: 0 0.5em
-        text-decoration: none
         text-shadow: rgba(0,0,0,0.5) 1px 1px 1px
 
+#header
+  +border_radius(7px 7px 0 0)
+  background-color: #DBDBDF
+  background-image: -moz-linear-gradient(center top , #DBDBDF, #CBCBCF)
+  border-bottom: 1px solid #BBBBBB
+  margin: $spacing 0 0 0
+  padding: $spacing $spacing*1.5
+  h1
+    font-size: 1.96em
+    letter-spacing: -1px
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9)
+  #main-menu
+    ul
+      +navigation_list
+      margin-left: -$spacing/2
+  #quick-search
+    float: right
 
 #main
   #content
