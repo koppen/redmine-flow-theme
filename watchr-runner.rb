@@ -19,6 +19,7 @@ end
 # Watchr Rules
 # --------------------------------------------------
 watch( '^sass/(.*)' ) { |m| rebuild_stylesheets }
+watch( '^sass/(.*)/(.*)' ) { |m| rebuild_stylesheets }
 
 # --------------------------------------------------
 # Signal Handling
@@ -31,4 +32,5 @@ end
 # Ctrl-C
 Signal.trap('INT') { abort("\n") }
 
+rebuild_stylesheets
 puts "Watching.."
