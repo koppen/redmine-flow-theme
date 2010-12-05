@@ -4,6 +4,10 @@
 
 $spacing: 12px
 
+$content_width: 73%
+
+$outside_border_radius: 7px
+
 body
   background: #55555c
   color: #333333
@@ -25,12 +29,13 @@ body
         text-shadow: rgba(0,0,0,0.5) 1px 1px 1px
 
 #header
-  +border_radius(7px 7px 0 0)
+  +border_radius($outside_border_radius $outside_border_radius 0 0)
   background-color: #DBDBDF
   background-image: -moz-linear-gradient(center top , #DBDBDF, #CBCBCF)
   border-bottom: 1px solid #BBBBBB
   margin: $spacing 0 0 0
-  padding: $spacing
+  padding: $spacing 0
+  width: $content_width
   h1
     font-size: 1.96em
     letter-spacing: -1px
@@ -41,14 +46,17 @@ body
       margin-left: -$spacing/2
   #quick-search
     float: right
+    width: 250px
+    margin-right: -250px - $spacing
 
 #main
-  overflow: hidden
   #content
     background: #ffffff
     float: left
-    width: 73%
+    width: $content_width
   #sidebar
     background: #efefff
+    +border-radius(0 $outside_border_radius $outside_border_radius 0)
     float: right
-    width: 27%
+    margin-top: -$spacing * 2
+    width: 100 - $content_width
