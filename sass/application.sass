@@ -1,11 +1,10 @@
 @import 'mixins/border-radius'
 @import 'mixins/box-shadow'
 @import 'mixins/navigation-list'
+@import 'mixins/outside-content'
 
 $spacing: 12px
-
 $content_width: 73%
-
 $outside_border_radius: 7px
 
 body
@@ -16,6 +15,7 @@ body
   line-height: 1.6em
 
 #top-menu
+  +outside_content
   overflow: hidden
   #account
     float: right
@@ -23,10 +23,6 @@ body
     float: right
   ul
     +navigation_list
-    li
-      a
-        color: #ffffff
-        text-shadow: rgba(0,0,0,0.5) 1px 1px 1px
 
 #header
   +border_radius($outside_border_radius $outside_border_radius 0 0)
@@ -52,7 +48,10 @@ body
 #main
   #content
     background: #ffffff
+    +border-radius(0 0 $outside_border_radius $outside_border_radius)
     float: left
+    margin-bottom: $spacing
+    min-height: 21em // Keep it roughly higher than the sidebar on the Activity page
     width: $content_width
   #sidebar
     background: #efefff
@@ -60,3 +59,9 @@ body
     float: right
     margin-top: -$spacing * 2
     width: 100 - $content_width
+
+#footer
+  +outside_content
+  clear: both
+  margin: $spacing
+  text-align: center

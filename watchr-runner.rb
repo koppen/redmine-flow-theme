@@ -19,7 +19,7 @@ end
 # Watchr Rules
 # --------------------------------------------------
 watch( '^sass/(.*)' ) { |m| rebuild_stylesheets }
-watch( '^sass/(.*)/(.*)' ) { |m| rebuild_stylesheets }
+watch( '^sass/mixins/(.*)' ) { |m| rebuild_stylesheets }
 
 # --------------------------------------------------
 # Signal Handling
