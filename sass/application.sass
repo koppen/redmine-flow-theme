@@ -30,7 +30,7 @@ body
   background-image: -moz-linear-gradient(center top , #DBDBDF, #CBCBCF)
   border-bottom: 1px solid #BBBBBB
   margin: $spacing 0 0 0
-  padding: $spacing $spacing*1.5
+  padding: $spacing
   h1
     font-size: 1.96em
     letter-spacing: -1px
@@ -43,5 +43,12 @@ body
     float: right
 
 #main
+  overflow: hidden
   #content
     background: #ffffff
+    float: left
+    width: 73%
+  #sidebar
+    background: #efefff
+    float: right
+    width: 27%
