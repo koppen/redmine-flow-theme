@@ -40,7 +40,6 @@ a
   border-bottom: 1px solid #BBBBBB
   margin: $spacing 0 0 0
   padding: $spacing 1%
-  width: $content_width - 2
   h1
     font-size: 1.96em
     letter-spacing: -1px
@@ -51,10 +50,9 @@ a
       margin-left: -$spacing/2
   #quick-search
     float: right
-    width: 250px
-    margin-right: -250px - $spacing
 
 #main
+  overflow: hidden
   #content
     background: #ffffff
     +border-radius(0 0 $outside_border_radius $outside_border_radius)
@@ -65,9 +63,8 @@ a
     width: $content_width - 2
   #sidebar
     background: #efefff
-    +border-radius(0 $outside_border_radius $outside_border_radius 0)
+    +border-radius(0 0 $outside_border_radius 0)
     float: right
-    margin-top: -$spacing * 2
     padding: $spacing 1%
     width: 100 - $content_width - 2
 
