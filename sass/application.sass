@@ -44,10 +44,25 @@ a
     font-size: 1.96em
     letter-spacing: -1px
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9)
+    margin-bottom: $spacing
+    margin-top: $spacing
   #main-menu
     ul
       +navigation_list
       margin-left: -$spacing/2
+      li
+        margin-right: 1px
+      a
+        +border-radius(1em)
+        color: #333333
+        &:hover
+          background: #999999
+          color: #ffffff
+        &.selected
+          background: #666666
+          background: #666666 -moz-linear-gradient(top, #555555, #666666)
+          +box-shadow(inset rgba(0,0,0,0.5) 0 0.1em 0.1em)
+          color: #ffffff
   #quick-search
     float: right
 
