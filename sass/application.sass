@@ -52,6 +52,8 @@ a
     float: right
 
 #main
+  background: #ffffff
+  +border-radius(0 0 $outside_border_radius $outside_border_radius)
   overflow: hidden
   #content
     background: #ffffff
@@ -63,6 +65,8 @@ a
     width: $content_width - 2
   #sidebar
     background: #efefff
+    background: -moz-linear-gradient(center top , #EFEFFF, #FFFFFF) repeat scroll 0 0 transparent
+    // TODO: Webkit
     +border-radius(0 0 $outside_border_radius 0)
     float: right
     padding: $spacing 1%
