@@ -39,7 +39,7 @@ a
   background-image: -moz-linear-gradient(center top , #DBDBDF, #CBCBCF)
   border-bottom: 1px solid #BBBBBB
   margin: $spacing 0 0 0
-  padding: $spacing 1%
+  padding: $spacing 2%
   h1
     font-size: 1.96em
     letter-spacing: -1px
@@ -59,10 +59,10 @@ a
     background: #ffffff
     +border-radius(0 0 $outside_border_radius $outside_border_radius)
     float: left
-    margin-bottom: $spacing
+    margin: 0 2% $spacing 2%
     min-height: 21em // Keep it roughly higher than the sidebar on the Activity page
-    padding: $spacing 1%
-    width: $content_width - 2
+    padding: $spacing 0
+    width: $content_width - 4
   #sidebar
     background: #efefff
     background: -moz-linear-gradient(center top , #EFEFFF, #FFFFFF) repeat scroll 0 0 transparent
@@ -70,7 +70,7 @@ a
     +border-radius(0 0 $outside_border_radius 0)
     float: right
     padding: $spacing 1%
-    width: 100 - $content_width - 2
+    width: 100 - $content_width - 4
 
 #footer
   +outside_content
