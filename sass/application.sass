@@ -23,6 +23,14 @@ a
     color: #6666EE
     text-decoration: underline
 
+// Lists
+ul, ol
+  margin: 0
+  padding: 0
+li
+  margin-left: 1.5em
+  padding: 0
+
 #top-menu
   +outside_content
   overflow: hidden
@@ -92,3 +100,55 @@ a
   clear: both
   margin: $spacing
   text-align: center
+
+// Forms
+label
+  display: block
+  float: left
+  font-weight: bold
+  margin-right: 2%
+  text-align: right
+  width: 15%
+
+#issue_subject
+  width: 75%
+
+div.jstElements,
+div.jstEditor
+  margin-left: 17%
+  padding: 0
+
+div.jstElements
+  button
+    margin-right: 1px
+  .help
+    margin-right: 0
+div.jstEditor
+  textarea
+    width: 100%
+
+#attachments_form
+  #attachments_fields
+    display: block
+  label.inline
+    display: block
+    float: none
+    margin: 0.5em 17%
+    text-align: left
+    width: auto
+  small
+    // The "Add another file" link
+    margin-left: 17%
+  input[type=file]
+    margin-left: 17%
+  input[type=file]:first-child
+    margin-left: 0
+
+#watchers_form
+  overflow: hidden
+  .floating
+    float: left
+    font-weight: normal
+    margin: 0
+    text-align: left
+    width: 25%
