@@ -7,6 +7,7 @@ $spacing: 12px
 $content_width: 73%
 $outside_border_radius: 7px
 $sidebar_width: 200px
+$label_width: 15%
 $separator_color: #dddeef
 
 body
@@ -131,14 +132,24 @@ label
   font-weight: bold
   margin-right: 2%
   text-align: right
-  width: 15%
+  width: $label_width
 
 #issue_subject
   width: 75%
 
+fieldset
+  margin-left: $label_width + 2%
+  legend
+    float: left
+    font-weight: bold
+    margin-left: -$label_width
+  label.floating
+    text-align: left
+    
+
 div.jstElements,
 div.jstEditor
-  margin-left: 17%
+  margin-left: $label_width + 2%
   padding: 0
 
 div.jstElements
@@ -156,7 +167,7 @@ div.jstEditor
   label.inline
     display: block
     float: none
-    margin: 0.5em 17%
+    margin: 0.5em ($label_width + 2%)
     text-align: left
     width: auto
   small
