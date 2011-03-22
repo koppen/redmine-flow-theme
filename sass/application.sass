@@ -6,7 +6,8 @@
 $spacing: 12px
 $content_width: 73%
 $outside_border_radius: 7px
-$sidebar_width: 250px
+$sidebar_width: 200px
+$separator_color: #dddeef
 
 body
   background: #55555c
@@ -99,6 +100,23 @@ li
 
 .contextual
   float: right
+
+.tabs
+  border-right: 1px solid $separator_color
+  float: left
+  width: $sidebar_width
+  .tabs-buttons
+    display: none
+  a
+    display: block
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+    &.selected
+      font-weight: bold
+
+.tab-content
+  margin-left: $sidebar_width + $spacing
 
 #footer
   +outside_content
