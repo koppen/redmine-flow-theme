@@ -127,13 +127,6 @@ h1, h2, h3
 .tab-content
   margin-left: $sidebar_width + $spacing
 
-#footer
-  +outside_content
-  clear: both
-  margin: $spacing
-  text-align: center
-
-// Forms
 .box
   background-color: $box_background_color
   +border-radius($spacing / 2)
@@ -143,6 +136,19 @@ h1, h2, h3
   padding: $spacing
   h3:first-child
     margin-top: 0
+
+#footer
+  +outside_content
+  clear: both
+  margin: $spacing
+  text-align: center
+
+// Forms
+form
+  // em is used for form hints
+  em
+    display: block
+    margin-left: $label_width + 2%
 
 label
   display: block
