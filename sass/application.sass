@@ -138,6 +138,7 @@ label
   width: 75%
 
 fieldset
+  border: 1px solid $separator_color
   margin-left: $label_width + 2%
   legend
     float: left
@@ -145,7 +146,15 @@ fieldset
     margin-left: -$label_width
   label.floating
     text-align: left
-    
+
+// It would be nice submit buttons had a class or a containing element
+input[type=submit]
+  font-weight: bold
+  margin: $spacing 1em $spacing ($label_width + 2%)
+  padding: $spacing
+
+input + input[type=submit]
+  margin-left: 0
 
 div.jstElements,
 div.jstEditor
