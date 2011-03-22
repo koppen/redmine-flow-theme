@@ -1,3 +1,5 @@
+@import "http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold"
+
 @import 'mixins/border-radius'
 @import 'mixins/box-shadow'
 @import 'mixins/navigation-list'
@@ -34,6 +36,12 @@ li
   margin-left: 1.5em
   padding: 0
 
+// Headings
+h1, h2, h3
+  font-family: 'Droid Sans', 'Myriad Pro', arial, serif
+  letter-spacing: -1px
+
+
 #top-menu
   +outside_content
   overflow: hidden
@@ -53,7 +61,6 @@ li
   padding: $spacing
   h1
     font-size: 1.96em
-    letter-spacing: -1px
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9)
     margin: $spacing $spacing / 2
   #main-menu
