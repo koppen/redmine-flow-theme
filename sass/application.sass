@@ -11,9 +11,13 @@ $content_width: 73%
 $outside_border_radius: 7px
 $sidebar_width: 200px
 $label_width: 15%
+
 $separator_color: #e4e4ef
 $box_background_color: #f3f3f3
+$error_color: #dd0000
 $meta_color: #666666
+$success_color: #339933
+
 
 body
   background: #55555c
@@ -84,6 +88,18 @@ hr
   color: $meta_color
   font-size: 0.8em
   margin-top: 0
+
+.flash
+  +border-radius(0.4em)
+  background-color: #321401
+  background-color: rgba(0,0,0,0.4)
+  font-weight: bold
+  text-align: center
+  margin: 1em 0 0.5em 0
+  padding: ($spacing / 2) $spacing
+.notice
+  background-color: $success_color * 3
+  color: $success_color
 
 .pagination
   text-align: center
@@ -228,6 +244,16 @@ input[type=submit]
 
 .box + input[type=submit]
   font-weight: bold
+
+.errorExplanation, .error
+  color: $error_color
+  h2
+    font-size: 1em
+  p
+    margin-top: 0
+.fieldWithErrors input
+  border-color: $error_color
+
 
 div.jstElements,
 div.jstEditor
