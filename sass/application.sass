@@ -13,6 +13,7 @@ $sidebar_width: 200px
 $label_width: 15%
 $separator_color: #e4e4ef
 $box_background_color: #f3f3f3
+$meta_color: #666666
 
 body
   background: #55555c
@@ -53,12 +54,16 @@ h2
   margin-bottom: 0.2em
 h3
   font-size: 1.4em
+  margin-bottom: 0.2em
 
 table
   border-collapse: collapse
   width: 100%
 th, td
   padding: 0.2em 0.5em
+td
+  p
+    margin: 0
 th
   text-align: left
 table
@@ -70,6 +75,15 @@ table.list
     background: $separator_color
   th, td
     border-bottom: 1px solid $separator_color
+
+hr
+  border: none
+  border-top: 1px solid $separator_color
+
+.author
+  color: $meta_color
+  font-size: 0.8em
+  margin-top: 0
 
 .pagination
   text-align: center
@@ -295,3 +309,18 @@ div.jstEditor
       display: inline
       float: none
       width: auto
+
+// Issue page
+table.attributes
+  th
+    padding-left: 0
+
+#issue-form .box
+  background: none
+  border: none
+  margin: 0
+  padding: 0
+  +box-shadow(none)
+
+.issue .subject
+  display: none
