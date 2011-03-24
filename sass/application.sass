@@ -3,6 +3,7 @@
 @import 'mixins/border-radius'
 @import 'mixins/box-shadow'
 @import 'mixins/navigation-list'
+@import 'mixins/box'
 @import 'mixins/outside-content'
 
 $spacing: 12px
@@ -10,7 +11,7 @@ $content_width: 73%
 $outside_border_radius: 7px
 $sidebar_width: 200px
 $label_width: 15%
-$separator_color: #dddeef
+$separator_color: #e4e4ef
 $box_background_color: #f3f3f3
 
 body
@@ -29,6 +30,9 @@ a
     color: #6666EE
     text-decoration: underline
 
+  img
+    border: none
+
 // Lists
 ul, ol
   margin: 0
@@ -46,8 +50,29 @@ h1
   font-size: 1.4em
 h2
   font-size: 1.96em
+  margin-bottom: 0.2em
 h3
   font-size: 1.4em
+
+table
+  border-collapse: collapse
+  width: 100%
+th, td
+  padding: 0.2em 0.5em
+th
+  text-align: left
+table
+  .checkbox
+    padding: 0.2em
+    text-align: center
+table.list
+  th 
+    background: $separator_color
+  th, td
+    border-bottom: 1px solid $separator_color
+
+.pagination
+  text-align: center
 
 .subtitle
   margin-top: 0
@@ -136,12 +161,7 @@ h3
   margin-left: $sidebar_width + $spacing
 
 .box
-  background-color: $box_background_color
-  +border-radius($spacing / 2)
-  border: 1px solid $separator_color
-  +box-shadow(inset rgba(0,0,0,0.1) 0.05em 0.05em 0.2em)
-  margin: ($spacing / 2) 0
-  padding: $spacing
+  +box
   h3:first-child
     margin-top: 0
 
@@ -173,7 +193,7 @@ label
   width: 75%
 
 fieldset
-  border: none
+  +box
   &.box
     margin-left: -1px
     margin-right: -1px
@@ -187,7 +207,7 @@ fieldset
     &.floating
       width: 18%
 
-// It would be nice submit buttons had a class or a containing element
+// It would be nice if submit buttons had a class or a containing element
 input[type=submit]
   margin: $spacing 1em $spacing 0
   padding: $spacing
@@ -247,3 +267,31 @@ div.jstEditor
   text-align: center
   top: $spacing / 2
   width: 100px
+
+#query_form_content
+  fieldset
+    padding-top: 0
+  legend
+    cursor: pointer
+  table
+    th, td
+      border: none
+      padding: 0.2em 0
+      vertical-align: top
+
+      // It would be nice if the td text elements of the options table were actually labels, or at
+      // least inside th elements
+      font-weight: bold
+  #available_columns, #selected_columns
+    width: 99% !important
+  tr.filter
+    td
+      input
+        float: left
+  td.add-filter
+    text-align: right
+    vertical-align: top
+    label
+      display: inline
+      float: none
+      width: auto
