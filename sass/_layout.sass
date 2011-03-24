@@ -37,7 +37,21 @@
           color: #ffffff
   #quick-search
     float: right
-
+    a
+      color: $text_color
+      text-decoration: none
+    input
+      +border-radius(1em)
+      border-top: 1px solid #848484
+      border-right: 1px solid #c1c1c1
+      border-bottom: 1px solid #e1e1e1
+      border-left: 1px solid #c1c1c1
+      +box-shadow(inset rgba(0,0,0,0.2) 1px 1px 2px)
+      padding: 0.2em 1em
+    select
+      // The Jump to project dropdown
+      float: right
+      margin-top: $spacing
 #main
   background: #ffffff
   +border-radius(0 0 $outside_border_radius $outside_border_radius)
