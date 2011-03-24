@@ -1,0 +1,41 @@
+#query_form_content
+  fieldset
+    padding-top: 0
+  legend
+    cursor: pointer
+  table
+    th, td
+      border: none
+      padding: 0.2em 0
+      vertical-align: top
+
+      // It would be nice if the td text elements of the options table were actually labels, or at
+      // least inside th elements
+      font-weight: bold
+  #available_columns, #selected_columns
+    width: 99% !important
+  tr.filter
+    td
+      input
+        float: left
+  td.add-filter
+    text-align: right
+    vertical-align: top
+    label
+      display: inline
+      float: none
+      width: auto
+
+
+// Issue page
+table.attributes
+  th
+    padding-left: 0
+
+#issue-form .box
+  background: none
+  border: none
+  margin: 0
+  padding: 0
+  +box-shadow(none)
+

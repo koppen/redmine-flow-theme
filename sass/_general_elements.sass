@@ -1,0 +1,65 @@
+body
+  background: #55555c
+  color: #333333
+  font-family: helvetica, 'helvetica neue', arial, sans-serif
+  font-size: 76%
+  line-height: 1.6em
+
+// Links
+a
+  color: #3333AA
+  &:visited
+    color: #222299
+  &:hover
+    color: #6666EE
+    text-decoration: underline
+
+  img
+    border: none
+
+// Lists
+ul, ol
+  margin: 1em 0
+  padding: 0
+li
+  margin-left: 1.5em
+  padding: 0
+
+// Headings
+h1, h2, h3
+  font-family: 'Droid Sans', 'Myriad Pro', arial, serif
+  letter-spacing: -1px
+
+h1
+  font-size: 1.4em
+h2
+  font-size: 1.96em
+  margin-bottom: 0.2em
+h3
+  font-size: 1.4em
+  margin-bottom: 0.2em
+
+table
+  border-collapse: collapse
+  width: 100%
+th, td
+  padding: 0.2em 0.5em
+td
+  p
+    margin: 0
+th
+  text-align: left
+table
+  .checkbox
+    padding: 0.2em
+    text-align: center
+table.list
+  th 
+    background: $separator_color
+  tr, th, td
+    border-bottom: 1px solid $separator_color
+
+hr
+  border: none
+  border-top: 1px solid $separator_color
+
