@@ -15,7 +15,7 @@ label
   display: block
   float: left
   font-weight: bold
-  margin-right: 2%
+  margin: 2px 2% 2px 0
   text-align: right
   width: $label_width
 
@@ -86,6 +86,10 @@ div.jstEditor
     margin: 0.5em ($label_width + 2%)
     text-align: left
     width: auto
+    margin-bottom: 0
+  br
+    // Looks like we're using a br tag for layout purposes?
+    display: none
   small
     // The "Add another file" link
     margin-left: 17%
