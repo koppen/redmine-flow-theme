@@ -3,19 +3,22 @@ form
   // em is used for form hints
   em
     display: block
-    margin-left: $label_width + 2%
+    margin-left: $label_width + $label_spacing
   // p is used for form field wrappers
   p
     margin: $spacing/2 0
     overflow: hidden
+    br
+      display: none // What's with all the br's?
   input
     margin: 2px 0
+    max-width: 80%
 
 label
   display: block
   float: left
   font-weight: bold
-  margin: 2px 2% 2px 0
+  margin: 2px $label_spacing 2px 0
   text-align: right
   width: $label_width
 
@@ -77,9 +80,8 @@ div.jstEditor
     padding: 0.3%
     width: 99%
 
-#attachments_form
-  #attachments_fields
-    display: block
+#attachments_fields
+  display: block
   label.inline
     display: block
     float: none
@@ -87,16 +89,20 @@ div.jstEditor
     text-align: left
     width: auto
     margin-bottom: 0
+    span
+      margin-right: 1em
   br
     // Looks like we're using a br tag for layout purposes?
     display: none
-  small
-    // The "Add another file" link
-    margin-left: 17%
   input[type=file]
     margin-left: 17%
   input[type=file]:first-child
     margin-left: 0
+
+#attachments_form, #wiki_form
+  small
+    // The "Add another file" link
+    margin-left: 17%
 
 #watchers_form
   overflow: hidden
