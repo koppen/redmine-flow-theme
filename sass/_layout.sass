@@ -1,6 +1,7 @@
 #top-menu
   +outside_content
   overflow: hidden
+  padding-right: $jump_to_project_width + $spacing
   #account
     float: right
   #loggedas
@@ -51,7 +52,9 @@
     select
       // The Jump to project dropdown
       float: right
-      margin-top: $spacing
+      margin-right: -$spacing / 2
+      margin-top: -64px // Move it up "inside" #main-menu
+      width: $jump_to_project_width
 #main
   background: #ffffff
   +border-radius(0 0 $outside_border_radius $outside_border_radius)
