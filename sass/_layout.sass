@@ -19,6 +19,14 @@
   h1
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9)
     margin: $spacing / 2
+    a
+      color: inherit
+      font-weight: normal
+      text-decoration: none
+      &:hover
+        color: $link_hover_color
+        text-decoration: underline
+
   #main-menu
     ul
       +navigation_list
