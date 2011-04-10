@@ -42,6 +42,15 @@ fieldset
   p
     clear: left
 
+.box
+  fieldset
+    // Fieldsets inside a box element shouldn't get the box styling
+    border: 0
+    background: inherit
+    +box-shadow(none)
+    margin: 0
+    padding: 0
+
 .splitcontentleft, .splitcontentright
   label
     margin-right: 5.5%
