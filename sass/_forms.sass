@@ -15,7 +15,6 @@ form
     max-width: 80%
 
 label
-  display: block
   float: left
   font-weight: bold
   margin: 2px $label_spacing 2px 0
@@ -126,10 +125,24 @@ div.jstEditor
 form
   table
     margin: $spacing 0
+    td, th
+      padding: 0.2em
     td
       label
         float: none
         text-align: inherit
         width: auto
-      input[type=submit]
+      input
         float: left
+        margin-right: 1em
+    table
+      // Tables inside tables in the issues filter - hello 2003
+      margin: 0
+  fieldset
+    table
+      margin-top: 0
+
+#filters
+  table
+    margin: 0
+
