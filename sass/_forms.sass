@@ -4,6 +4,7 @@ form
   em
     display: block
     margin-left: $label_width + $label_spacing
+    font-size: 0.8em
   // p is used for form field wrappers
   p
     margin: $spacing/2 0
@@ -20,6 +21,9 @@ label
   margin: 2px $label_spacing 2px 0
   text-align: right
   width: $label_width
+  &.block
+    input[type=checkbox]
+      margin-right: 0.5em
 
 #issue_subject
   width: 75%
@@ -146,3 +150,10 @@ form
   table
     margin: 0
 
+.tabular
+  label
+    width: 40%
+  input[type=text]
+    width: 40%
+  .jstEditor, .jstElements, em
+    margin-left: 42%
