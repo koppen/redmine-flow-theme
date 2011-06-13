@@ -32,12 +32,21 @@ table.attributes
   th
     padding-left: 0
 
-#issue-form .box
-  background: none
-  border: none
-  margin: $spacing 0
-  padding: 0
-  +box-shadow(none)
+#issue-form
+  .box
+    background: none
+    border: none
+    +box-shadow(none)
+    margin: $spacing 0
+    padding: 0
+  .attributes
+    label
+      margin-right: 4%
+      width: 40%
+
+  #attachments_form
+    label.inline, small
+      margin-left: 21%
 
 #history
   .journal
