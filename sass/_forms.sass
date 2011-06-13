@@ -16,11 +16,9 @@ form
     max-width: 80%
 
 label
-  float: left
   font-weight: bold
-  margin: 2px $label_spacing 2px 0
+  margin: 2px 0 2px 0
   text-align: right
-  width: $label_width
   &.block
     input[type=checkbox]
       margin-right: 0.5em
@@ -54,11 +52,6 @@ fieldset
     margin: 0
     padding: 0
 
-.splitcontentleft, .splitcontentright
-  label
-    margin-right: 5.5%
-    width: $label_width * 2
-
 // It would be nice if submit buttons had a class or a containing element
 input[type=submit]
   margin: $spacing 1em $spacing 0
@@ -79,7 +72,6 @@ input[type=submit]
 
 div.jstElements,
 div.jstEditor
-  margin-left: $label_width + 2%
   padding: 0
 
 div.jstElements
@@ -97,7 +89,6 @@ div.jstEditor
   label.inline
     display: block
     float: none
-    margin: 0.5em ($label_width + 2%)
     text-align: left
     width: auto
     margin-bottom: 0
@@ -110,11 +101,6 @@ div.jstEditor
     margin-left: 17%
   input[type=file]:first-child
     margin-left: 0
-
-#attachments_form, #wiki_form
-  small
-    // The "Add another file" link
-    margin-left: 17%
 
 #watchers_form
   overflow: hidden
@@ -149,11 +135,3 @@ form
 #filters
   table
     margin: 0
-
-.tabular
-  label
-    width: 19%
-  input[type=text]
-    width: 40%
-  .jstEditor, .jstElements, em
-    margin-left: 21%

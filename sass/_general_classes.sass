@@ -21,9 +21,11 @@
 .pagination
   text-align: center
 
-.subtitle
+p.subtitle
   color: $meta_color
-  margin-top: 0
+  font-size: 0.9em
+  font-style: normal
+  margin: 0
 
 .splitcontentleft, .splitcontentright
   width: 48%
@@ -34,8 +36,12 @@
 
 .contextual
   float: right
+  font-size: inherit
 #content > .contextual
   margin-top: 0.4em
 
 .nodata
   color: $meta_color
+
+.tip
+  +box-shadow(rgba(0,0,0,0.5) 0 0 2em)

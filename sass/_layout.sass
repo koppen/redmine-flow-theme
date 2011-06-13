@@ -1,19 +1,33 @@
 #top-menu
+  // Reset Redmine stuff
+  background: none
+  font-size: inherit
+  height: auto
+  padding: 0
+  a
+    font-weight: normal
+    margin-right: inherit
+
   +outside_content
   overflow: hidden
   padding-right: $jump_to_project_width + $spacing
   #account
     float: right
   #loggedas
+    color: inherit
     float: right
+    margin-right: inherit
   ul
     +navigation_list
+
 
 #header
   +border_radius($outside_border_radius $outside_border_radius 0 0)
   background-color: #DBDBDF
   background-image: -moz-linear-gradient(center top , #DBDBDF, #CBCBCF)
   border-bottom: 1px solid #BBBBBB
+  color: $text_color
+  height: auto
   margin: $spacing 0 0 0
   padding: $spacing
   h1
@@ -28,6 +42,9 @@
         text-decoration: underline
 
   #main-menu
+    position: relative
+    margin-right: auto
+    left: 0
     ul
       +navigation_list
       margin-left: 0
@@ -36,6 +53,7 @@
       a
         +border-radius(1em)
         color: #333333
+        font-weight: normal
         &:hover
           background: #999999
           color: #ffffff
@@ -49,6 +67,8 @@
     a
       color: $text_color
       text-decoration: none
+    form
+      display: block
     input
       +border-radius(1em)
       border-top: 1px solid #848484
@@ -69,9 +89,11 @@
   width: 100%
   #content
     background: #ffffff
-    margin: 0 ($sidebar_width + $spacing * 3) ($spacing * 1.5) ($spacing * 1.5)
+    border: 0
+    margin: ($spacing * 1.5) ($sidebar_width + $spacing * 3) ($spacing * 1.5) ($spacing * 1.5)
     min-height: 21em // Keep it roughly higher than the sidebar on the Activity page
     padding: 0
+    width: auto
   #sidebar
     background: #efefff
     background: -moz-linear-gradient(center top ,#EFEFFF 50%, #FFFFFF) repeat scroll 0 0 transparent
@@ -82,6 +104,8 @@
     padding-bottom: $spacing * 4
     width: $sidebar_width
     h3:first-child
+      color: $text_color
+      font-size: 1.4em
       margin-top: 0.6em
     label
       clear: both
@@ -93,19 +117,40 @@
     #sidebar
       display: none
 
-.tabs
+#content .tabs
   border-right: 1px solid $separator_color
   float: left
+  height: 1px
+  margin: auto
+  overflow: visible
   width: $sidebar_width
+  ul
+    border: none
+    padding: inherit
+    position: relative
+    width: auto
+    li
+      background: none
+      float: none
+      margin: 0
+      a
+        background: none
+        border: 0
+        color: $link_color
+        display: block
+        font-size: inherit
+        font-weight: normal
+        line-height: inherit
+        padding: 0
+        text-decoration: none
+        &:hover
+          background: none
+          text-decoration: underline
+        &.selected
+          border: 0
+          font-weight: bold
   .tabs-buttons
     display: none
-  a
-    display: block
-    text-decoration: none
-    &:hover
-      text-decoration: underline
-    &.selected
-      font-weight: bold
 
 .tab-content
   margin-left: $sidebar_width + $spacing
@@ -117,6 +162,8 @@
 
 #footer
   +outside_content
+  background: none
+  border: none
   clear: both
   font-size: 0.8em
   margin: $spacing
@@ -125,14 +172,19 @@
 #ajax-indicator
   background: #000000
   background: rgba(0, 0, 0, 0.5)
+  border: 0
   +border-radius(1em)
   color: #FFFFFF
   display: block
+  font-weight: normal
   left: 50%
   margin-left: -50px
+  opacity: 1
+  padding: 0
   position: fixed
   text-align: center
   top: $spacing / 2
   width: 100px
-
-
+  span
+    background: none
+    padding: 0
